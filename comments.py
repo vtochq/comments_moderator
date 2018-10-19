@@ -9,13 +9,13 @@ import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 
-savefprefix="nurall_"
+savefprefix="all_"
 regenerate_data = True
 
 if regenerate_data:
     myclient = pymongo.MongoClient("mongodb://localhost:27017/")
 
-    mydb = myclient["talk"]
+    mydb = myclient["mydb"]
 
     mycol = mydb["comments"]
 

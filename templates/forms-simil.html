@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" media="screen" href ="static/bootstrap.min.css">
+<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+</head>
+   <body>
+
+      <h2 style = "text-align: center;">Similarity App</h2>
+<div style="margin:5%">
+  <form  action="" method="post" role="form">
+    {{ form.csrf }}
+    <div class="form-group">
+	<input class="form-control" name="pos" id="pos">
+  <input class="form-control" name="neg" id="neg">
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+	{% if result %}
+                <div class="alert alert-info" style="margin-top:1%">
+                <strong>{{ result }}</strong>
+                </div>
+        {% endif %}
+</div>
+   </body>
+</html>
